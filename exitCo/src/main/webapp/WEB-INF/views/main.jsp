@@ -10,12 +10,13 @@
 <style>
 html,body{
 width:100%;  height:100%;
-overflow: hidden;
+overflow: visible;
 }
 </style>
 <body>
 <%@ include file="./layout/header.jsp"%>
-<div id="map" style="width:100%; height:82%;"></div>
+<div id="map" style="width:100%; height:83%;">
+</div>
 
 
 
