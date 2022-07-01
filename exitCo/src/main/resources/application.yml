@@ -12,3 +12,7 @@ spring: #뷰리졸버
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false

@@ -25,7 +25,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hs.exitCo.dto.KakaoDto;
-import com.hs.exitCo.kakao.KakaoGetDong;
+import com.hs.exitCo.model.KakaoGetDong;
 
 @Controller
 public class MainApiController {
@@ -37,10 +37,10 @@ public class MainApiController {
 	        RestTemplate restTemplate = new RestTemplate();
 			 HttpHeaders headers = new HttpHeaders();
 			headers.add("Authorization", "KakaoAK cdda625610b1371268e07ad5159c28d9");
-			headers.add("content-type", "application/x-www-form-urlencoded;charset=utf-8");
+			headers.add("content-type", "application/json;charset=utf-8");
 			 HttpEntity<MultiValueMap<String,String>> entity = new HttpEntity<>(headers);
 			String strUrl = "https://dapi.kakao.com/v2/local/geo/coord2regioncode.json" + "?x=" + kakao.getLongitude()
-					+ "&y=" + kakao.getLatitude() + "&input_coord=WGS84&output_coord=WGS84";
+					+ "&y=" + kakao.getLatitude() + "&input_coord=WGS84";
 			ResponseEntity<String> response = restTemplate.exchange(
 					strUrl,
 					HttpMethod.GET,
@@ -52,9 +52,9 @@ public class MainApiController {
 			ObjectMapper objectMapper = new ObjectMapper();
 			 KakaoGetDong kakaoGetDong =null;
 			try {
-			
+				System.out.println(response.getBody());
 				kakaoGetDong = objectMapper.readValue(response.getBody(), KakaoGetDong.class);
-				System.out.println(kakaoGetDong.getDocuments());
+				System.out.println(kakaoGetDong.getDocuments().get(0).region_2depth_name);
 				
 			} catch (JsonMappingException e) {
 				// TODO Auto-generated catch block
@@ -63,7 +63,7 @@ public class MainApiController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println(kakaoGetDong.getDocuments().getRegion_2depth_name());
+
 
 		return "";
 	}
