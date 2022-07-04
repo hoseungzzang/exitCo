@@ -11,7 +11,7 @@ public class MainController {
 
 	@GetMapping({"/",""})
 	public String main(Model model) {
-		model.addAttribute("model", "dasdasd");
+
 		return "main";
 	}
 }

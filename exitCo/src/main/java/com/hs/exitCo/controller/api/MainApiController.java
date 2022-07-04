@@ -93,7 +93,9 @@ public class MainApiController {
 				try {
 					System.out.println(response2.getBody());
 					getSido = objectMapper2.readValue(response2.getBody(), GetSido.class);
-					System.out.println(getSido.getRow());
+					System.out.println(getSido.getTsunamiShelter().get(1).getRow().size());
+					System.out.println(getSido);
+					
 					
 				} catch (JsonMappingException e) {
 					// TODO Auto-generated catch block
