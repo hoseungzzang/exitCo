@@ -11,22 +11,28 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GetSido {
 
-	public List<TsunamiShelter> TsunamiShelter;
+	public Body body;
 	//public List<TsunamiShelter> tsunamiShelter;
 	
 	@Data
 	@JsonIgnoreProperties(ignoreUnknown = true)
-	public  static class TsunamiShelter {
-		public List<Row> row;
+	public  static class Body {
+		public List<Items> items;
 
 	
 		@Data
 		@JsonIgnoreProperties(ignoreUnknown = true)
-		public static class Row {
-			public String remarks;
-			public String shel_nm;
-			public Double lon;
-			public Double lat;
+		public static class Items {
+			public Item item;
+			
+			
+			@Data
+			@JsonIgnoreProperties(ignoreUnknown = true)
+			public static class Item {
+				public String shelter_nm;
+				public String x;
+				public String y;
+			}
 		}
 	}
 

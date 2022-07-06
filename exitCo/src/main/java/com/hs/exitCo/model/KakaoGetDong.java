@@ -22,6 +22,7 @@ public class KakaoGetDong {
 	@Data
 	@JsonIgnoreProperties(ignoreUnknown=true)
 	public static class Documents{
+			public String region_1depth_name;
 			public String region_2depth_name;
 			public String region_3depth_name;
 	}
