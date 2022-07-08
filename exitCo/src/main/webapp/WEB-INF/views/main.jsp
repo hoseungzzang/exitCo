@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>전국 대피소 찾기</title>
 
+
+<link href="/css/kakao.css" rel="stylesheet" type="text/css">
+
 </head>
 <style>
 html,body{
@@ -21,11 +24,9 @@ overflow: visible;
 </div>
 
 
-
-
-
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9cfa94286fc9d288f6ba24e2389deba7"></script>
 <script src="/js/kakao.js"></script>
+
 <%@ include file="./layout/footer.jsp"%>
 </body>
 </html>
