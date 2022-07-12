@@ -105,11 +105,12 @@ public class MainApiController {
 			getSido = objectMapper2.readValue(response2.getBody(), GetSido.class);
 			TransCoord transCoord = new TransCoord();
 			for(int i=0; i<getSido.getBody().getItems().size(); i++) {
-				String [] resultSet = new String[3];
+				String [] resultSet = new String[4];
 				String [] arr = transCoord.transform2(getSido.getBody().getItems().get(i).getItem().getX().toString(), getSido.getBody().getItems().get(i).getItem().getY().toString());
 				resultSet[0] = getSido.getBody().getItems().get(i).getItem().getShelter_nm().toString();
 				resultSet[1] = arr[1];
 				resultSet[2] = arr[0];
+				resultSet[3] = getSido.getBody().getItems().get(i).getItem().getShelter_di().toString();
 				exitList.add(resultSet);
 			}
 		} catch (JsonMappingException e) {

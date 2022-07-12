@@ -32,6 +32,7 @@ public class GetSido {
 				public String shelter_nm;
 				public String x;
 				public String y;
+				public String shelter_di;
 			}
 		}
 	}
