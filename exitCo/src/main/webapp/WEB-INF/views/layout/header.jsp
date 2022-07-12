@@ -36,26 +36,13 @@
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-			<c:choose>
-				<c:when test="">
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link"
 							href="/auth/loginForm">로그인</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/auth/joinForm">회원가입</a></li>
 					</ul>
-				</c:when>
-				<c:otherwise>
-					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link"
-							href="/board/saveForm">글쓰기</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="/user/updateForm">회원정보확인</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="/logout">로그아웃</a></li>
-					</ul>
-				</c:otherwise>
-			</c:choose>
+
 
 		</div>
 	</nav>
