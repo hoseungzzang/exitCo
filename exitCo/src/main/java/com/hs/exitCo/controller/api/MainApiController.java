@@ -50,7 +50,7 @@ public class MainApiController {
 	String sidoCode;
 
 	@ResponseBody
-	@PostMapping("/mainApi/sidoSelect" )
+	@PostMapping("/auth/mainApi/sidoSelect" )
 	public ArrayList<String[]> callDong(@RequestBody KakaoDto kakao) throws IOException, URISyntaxException {
 
 		RestTemplate restTemplate = new RestTemplate();
