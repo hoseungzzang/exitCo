@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<link href="/css/footer.css" rel="stylesheet" type="text/css">
 <%@ include file="../layout/header.jsp"%>
-<div class="container">
+
+<div class="container" id='wrapper'>
 	<form>
 		<div class="form-group">
 			<label for="username">Username</label> <input type="username"
@@ -21,7 +22,8 @@
 	<button id="btn-save" class="btn btn-primary">회원가입</button>
 </div>
 <script src="/js/user/user.js"></script>
-<%@ include file="../layout/footer.jsp"%>
+<footer><%@ include file="../layout/footer.jsp"%></footer>
+
 </body>
 </html>
 

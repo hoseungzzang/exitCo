@@ -34,12 +34,12 @@
 			data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
 
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link"
+						<li class="nav-item "><a class="nav-link"
 							href="/auth/loginForm">로그인</a></li>
-						<li class="nav-item"><a class="nav-link"
+						<li class="nav-item "><a class="nav-link"
 							href="/auth/joinForm">회원가입</a></li>
 					</ul>
 
