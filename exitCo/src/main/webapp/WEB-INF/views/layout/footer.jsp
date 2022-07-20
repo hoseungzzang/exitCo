@@ -8,9 +8,12 @@ width:100%;
 height:17%;
 }
 </style>
+<footer class="mt-auto">
+
 <div class="foot text-center bg-dark text-white" >
 	<p>Created by HoseungZZang</p>
 	<p>📞 dsjoo99 (kakao)</p>
 	<p>📞 wnghtmd99@naver.com (email)</p>
 	<p>🏴 서울시 관악구 봉천동</p>
 </div>
+</footer>

@@ -131,7 +131,7 @@ function createMarker(cnt) {
 	descContent.appendChild(LinkDiv);
 	//커스텀오버레이 링크
 	var LinkContent = document.createElement("a");
-	url = "/"
+	url = "/auth/board/comuSearch/"+positions[cnt].title;
 	LinkContent.setAttribute("href", url);
 	LinkContent.setAttribute("target", "_blank");
 

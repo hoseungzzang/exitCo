@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/header.jsp"%>
+<body class="d-flex flex-column min-vh-100">
 <div class="container">
 	<form action="/auth/loginProc" method="post">
 		<div class="form-group">
@@ -21,10 +22,8 @@
 	</form>
 	
 </div>
-
-<%@ include file="../layout/footer.jsp"%>
-
 </body>
+<%@ include file="../layout/footer.jsp"%>
 </html>
 
 

@@ -29,6 +29,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	private PrincipalDetailService principalDetailService;
 	
 	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		// TODO Auto-generated method stub
+		return super.authenticationManagerBean();
+	}
+
+	
+	@Bean
 	public BCryptPasswordEncoder encodePWD() {
 		return new BCryptPasswordEncoder();
 	}
