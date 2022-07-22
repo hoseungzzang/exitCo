@@ -13,6 +13,7 @@
 			<label for="comment">Content:</label>
 			<textarea class="form-control summernote" rows="5" id="content"></textarea>
 		</div>
+		<input type="hidden" id="exitName"  name="exitName" value="${exitName}">
 	</form>
 	<button id="btn-save" class="btn btn-primary">글 저장</button>
 </div>

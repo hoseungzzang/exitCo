@@ -18,8 +18,8 @@ let index = {
 	save: function() {
 		let data = {
 			title: $("#title").val(),
-			content: $("#content").val()
-
+			content: $("#content").val(),
+			exitName:  $("#exitName").val(),
 		};
 
 		//ajax호출 시 default가 비동기 호출이다.
@@ -32,7 +32,8 @@ let index = {
 
 		}).done(function(resp) {
 			alert("글쓰기 완료");
-			location.href = "/";
+			//location.href = "/";
+			history.back();
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		});

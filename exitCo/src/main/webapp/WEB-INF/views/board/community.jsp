@@ -3,10 +3,11 @@
 
 <%@ include file="../layout/header.jsp"%>
 <body class="d-flex flex-column min-vh-100 ">
-
-		<div class="container d-flex"  style="height:500px">
-
-			<table class="table table-striped align-self-end">
+		<div class="container d-flex justify-content-center"  style="height:200px">
+		<div class="align-self-end"><h1>대피구역 : ${title}</h1></div>
+		</div>
+		<div class="container d-flex"  style="height:300px">
+			<table class="table table-striped align-self-center">
 				<thead>
 					<tr>
 						<th>번호</th>
@@ -17,13 +18,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th>번호</th>
-						<th>제목</th>
-						<th>작성자</th>
-						<th>날짜</th>
-						<th>조회수</th>
-					</tr>
+			<c:forEach items="${exitNameList}" var="exitNameList">
+								<tr>
+									<td>${exitNameList.id}</td>
+									<td>${exitNameList.title}</td>
+									<td>${exitNameList.user.username}</td>
+									<td>${exitNameList.createDate}</td>
+									<td>${exitNameList.count}</td>
+								</tr>
+							</c:forEach>
 		
 
 				</tbody>
@@ -31,7 +34,25 @@
 			</table>
 		
 		</div>
-			<button type="button" onclick="location.href='/board/saveForm'" class="btn bg-dark text-white align-self-center">글 쓰기</button>
+			<ul class="pagination justify-content-center">
+	<c:choose>
+	<c:when test="${exitNameList.first }">
+	  <li class="page-item disabled"><a class="page-link" href="?page=${exitNameList.number}">Previous</a></li>
+	</c:when>
+	<c:otherwise>
+	<li class="page-item"><a class="page-link" href="?page=${exitNameList.number-1}">Previous</a></li>
+	</c:otherwise>
+	</c:choose>
+	<c:choose>
+	<c:when test="${exitNameList.last }">
+  <li class="page-item disabled"><a class="page-link" href="?page=${exitNameList.number}">Next</a></li>
+	</c:when>
+	<c:otherwise>
+  <li class="page-item"><a class="page-link" href="?page=${exitNameList.number+1}">Next</a></li>
+	</c:otherwise>
+	</c:choose>
+</ul>
+			<button type="button" onclick="location.href='/board/saveForm?exitName=${title}'" class="btn bg-dark text-white align-self-center">글 쓰기</button>
 
 
 </body>

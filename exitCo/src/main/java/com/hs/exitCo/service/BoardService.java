@@ -38,16 +38,15 @@ public class BoardService {
 	
 	
 	@Transactional
-	public void  board(Board board,User user) {
-		
+	public void  save(Board board,User user) {
 		board.setCount(0);
 		board.setUser(user);
 		boardRepository.save(board);
 	}
 
 	@Transactional(readOnly=true)
-	public Page<Board> boardSearch(Pageable pageable){
-		return boardRepository.findAll(pageable);
+	public Page<Board> boardSearch(Pageable pageable,String exitName){
+		return boardRepository.findByExitName(pageable,exitName);
 	}
 	
 	@Transactional(readOnly=true)
