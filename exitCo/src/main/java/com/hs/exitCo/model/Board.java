@@ -62,7 +62,7 @@ public class Board {
 	private List<Reply> replys;
 	//조인컬럼을 사용하게 되면 DB상에 컬럼이추가되는데 리스트형식은 여러개를 가져오기 때문에 DB에 데이터를 넣게되면 원자성 어긋남
 	
-	@CreationTimestamp
-	private Timestamp createDate;
+	@Column(nullable = false, length=20)
+	private String createDate;
 	
 }

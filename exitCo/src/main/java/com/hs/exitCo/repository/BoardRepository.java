@@ -21,5 +21,5 @@ public interface BoardRepository extends JpaRepository<Board,Integer> {
 
 
 	@Query("SELECT b FROM Board b WHERE b.exitName = :exitName")
-	public Page<Board> findByExitName(Pageable pageable, String exitName);
+	Page<Board> findByExitName(Pageable pageable, String exitName);
  }

@@ -2,6 +2,8 @@ package com.hs.exitCo.service;
 
 
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,12 +43,16 @@ public class BoardService {
 	public void  save(Board board,User user) {
 		board.setCount(0);
 		board.setUser(user);
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		board.setCreateDate(sdf.format(timestamp)); 
 		boardRepository.save(board);
 	}
 
-	@Transactional(readOnly=true)
+	@Transactional
 	public Page<Board> boardSearch(Pageable pageable,String exitName){
-		return boardRepository.findByExitName(pageable,exitName);
+		Page<Board> boardList = boardRepository.findByExitName(pageable,exitName);
+		return boardList;
 	}
 	
 	@Transactional(readOnly=true)

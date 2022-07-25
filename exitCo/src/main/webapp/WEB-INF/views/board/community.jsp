@@ -7,7 +7,7 @@
 		<div class="align-self-end"><h1>대피구역 : ${title}</h1></div>
 		</div>
 		<div class="container d-flex"  style="height:300px">
-			<table class="table table-striped align-self-center">
+			<table class="table table-striped align-self-center" style="margin-left: auto; margin-right: auto; text-align:center;">
 				<thead>
 					<tr>
 						<th>번호</th>
@@ -18,10 +18,10 @@
 					</tr>
 				</thead>
 				<tbody>
-			<c:forEach items="${exitNameList}" var="exitNameList">
+			<c:forEach items="${exitNameList.content}" var="exitNameList">
 								<tr>
-									<td>${exitNameList.id}</td>
-									<td>${exitNameList.title}</td>
+									<td><a href="/auth/board/${exitNameList.id}" >${exitNameList.id}</a></td>
+									<td><a href="/auth/board/${exitNameList.id}" >${exitNameList.title}</a></td>
 									<td>${exitNameList.user.username}</td>
 									<td>${exitNameList.createDate}</td>
 									<td>${exitNameList.count}</td>
@@ -37,18 +37,18 @@
 			<ul class="pagination justify-content-center">
 	<c:choose>
 	<c:when test="${exitNameList.first }">
-	  <li class="page-item disabled"><a class="page-link" href="?page=${exitNameList.number}">Previous</a></li>
+	  <li class="page-item disabled"><a class="page-link" href="?page=${exitNameList.number}">이전</a></li>
 	</c:when>
 	<c:otherwise>
-	<li class="page-item"><a class="page-link" href="?page=${exitNameList.number-1}">Previous</a></li>
+	<li class="page-item"><a class="page-link" href="?page=${exitNameList.number-1}">이전</a></li>
 	</c:otherwise>
 	</c:choose>
 	<c:choose>
 	<c:when test="${exitNameList.last }">
-  <li class="page-item disabled"><a class="page-link" href="?page=${exitNameList.number}">Next</a></li>
+  <li class="page-item disabled"><a class="page-link" href="?page=${exitNameList.number}">다음</a></li>
 	</c:when>
 	<c:otherwise>
-  <li class="page-item"><a class="page-link" href="?page=${exitNameList.number+1}">Next</a></li>
+  <li class="page-item"><a class="page-link" href="?page=${exitNameList.number+1}">다음</a></li>
 	</c:otherwise>
 	</c:choose>
 </ul>

@@ -1,6 +1,9 @@
 package com.hs.exitCo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -30,10 +33,17 @@ public class BoardController {
 	}
 	
 	@GetMapping("/auth/board/comuSearch/{title}")
-	public String comuSearch(@PathVariable String title,Model model,@PageableDefault(size=3,sort="id",direction=Sort.Direction.DESC) 
+	public String comuSearch(@PathVariable String title,Model model,@PageableDefault(size=5,sort="id",direction=Sort.Direction.DESC) 
 	Pageable pageable) {
-		System.out.println(boardService.boardSearch(pageable,title));
-		model.addAttribute("exitNameList",boardService.boardSearch(pageable,title));
+		Page<Board> boardSearch = boardService.boardSearch(pageable, title);
+
+	model.addAttribute("exitNameList",boardSearch);
 		return "board/community";
+	}
+	
+	@GetMapping("/auth/board/{id}")
+	public String findById(@PathVariable int id, Model model) {
+		model.addAttribute("board",	boardService.boardIdSearch(id));
+		return "board/detail";
 	}
 }
