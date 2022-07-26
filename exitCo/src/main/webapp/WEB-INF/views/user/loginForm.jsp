@@ -3,8 +3,8 @@
 
 <%@ include file="../layout/header.jsp"%>
 <body class="d-flex flex-column min-vh-100">
-<div class="container">
-	<form action="/auth/loginProc" method="post">
+<div class="container d-flex justify-content-center" style="height:1000px;">
+	<form class=" align-self-center" style="width:65%;" action="/auth/loginProc" method="post">
 		<div class="form-group">
 			<label for="username">Username</label> <input type="username"
 				class="form-control" placeholder="Enter username" id="username" name="username">

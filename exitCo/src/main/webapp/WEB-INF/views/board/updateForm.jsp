@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/header.jsp"%>
+<body class="d-flex flex-column min-vh-100 ">
 <div class="container">
 	<form>
 	<input type="hidden" id="id" value="${board.id }" />

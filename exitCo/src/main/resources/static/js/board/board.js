@@ -98,7 +98,8 @@ let index = {
 
 		}).done(function(resp) {
 			alert("댓글작성 완료");
-			location.href = `/board/${data.boardId}`;
+			//location.href = `/board/${data.boardId}`;
+			location.reload(true);
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		});
@@ -112,7 +113,8 @@ let index = {
 
 		}).done(function(resp) {
 			alert("댓글 삭제 완료");
-			location.href = `/board/${boardId}`;
+			//location.href = `/board/${boardId}`;
+			location.reload(true);
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		});

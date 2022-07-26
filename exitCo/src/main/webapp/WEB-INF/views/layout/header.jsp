@@ -55,8 +55,6 @@
 				<c:otherwise>
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link"
-							href="/board/saveForm">글쓰기</a></li>
-						<li class="nav-item"><a class="nav-link"
 							href="/user/updateForm">회원정보확인</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 					</ul>

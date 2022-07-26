@@ -3,8 +3,8 @@
 
 <%@ include file="../layout/header.jsp"%>
 <body class="d-flex flex-column min-vh-100">
-<div class="container" id='wrapper'>
-	<form>
+<div class="container d-flex justify-content-center" id='wrapper' style="height:1000px;">
+	<form class=" align-self-center" style="width:65%;" >
 		<div class="form-group">
 			<label for="username">Username</label> <input type="username"
 				class="form-control" placeholder="Enter username" id="username">
@@ -17,9 +17,8 @@
 			<label for="email">Email address:</label> <input type="email"
 				class="form-control" placeholder="Enter email" id="email">
 		</div>
-
-	</form>
 	<button id="btn-save" class="btn btn-primary">회원가입</button>
+	</form>
 </div>
 </body>
 <script src="/js/user/user.js"></script>
