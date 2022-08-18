@@ -2,8 +2,9 @@
 	pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/header.jsp"%>
-<div class="container">
-	<form>
+<body class="d-flex flex-column min-vh-100">
+<div class="container d-flex justify-content-center" style="height:1000px;">
+	<form class=" align-self-center" style="width:65%;">
 	<input type="hidden" id="id" value="${principal.user.id }"/>
 		<div class="form-group">
 			<label for="username">Username</label> <input type="username" value="${principal.user.username}"
@@ -20,13 +21,14 @@
 			<label for="email">Email address:</label> <input type="email" value="${principal.user.email}"
 				class="form-control" placeholder="Enter email" id="email" >
 		</div>
-
-	</form>
 	<button id="btn-update" class="btn btn-primary">수정완료</button>
+	</form>
+
 </div>
 <script src="/js/user/user.js"></script>
-<%@ include file="../layout/footer.jsp"%>
+
 </body>
+<%@ include file="../layout/footer.jsp"%>
 </html>
 
 

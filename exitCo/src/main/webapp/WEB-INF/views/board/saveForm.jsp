@@ -6,8 +6,7 @@
 <div class="container d-flex justify-content-center" style="height:1000px;">
 	<form class=" align-self-center" >
 		<div class="form-group">
-			<label for="title">Title</label> <input type="title"
-				class="form-control" placeholder="Enter title" id="title"
+			<label for="title">Title</label> <input type="text" class="form-control" placeholder="Enter title" id="title"
 				name="title">
 		</div>
 		<div class="form-group">

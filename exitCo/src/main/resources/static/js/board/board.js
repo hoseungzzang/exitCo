@@ -19,9 +19,9 @@ let index = {
 		let data = {
 			title: $("#title").val(),
 			content: $("#content").val(),
-			exitName:  $("#exitName").val(),
+			exitName:  $("#exitName").val().trim(),
 		};
-
+		console.log(exitName);
 		//ajax호출 시 default가 비동기 호출이다.
 		$.ajax({
 			type: "POST",
@@ -32,8 +32,8 @@ let index = {
 
 		}).done(function(resp) {
 			alert("글쓰기 완료");
-			//location.href = "/";
-			history.back();
+			location.href = "/auth/board/comuSearch/"+data.exitName.trim()+"?page=0";
+			
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		});
@@ -42,8 +42,8 @@ let index = {
 	deleteById: function() {
 		//ajax호출 시 default가 비동기 호출이다.
 
-		let id = $("#id").text();
-
+		let id = $("#boardId").val();
+				console.log(id);
 		$.ajax({
 			type: "DELETE",
 			url: "/api/board/" + id,

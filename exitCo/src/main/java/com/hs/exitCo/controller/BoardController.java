@@ -46,4 +46,10 @@ public class BoardController {
 		model.addAttribute("board",	boardService.boardIdSearch(id));
 		return "board/detail";
 	}
+	
+	@GetMapping("/auth/board/{id}/updateForm")
+	public String comuUpdate(@PathVariable int id, Model model) {
+		model.addAttribute("board",	boardService.boardIdSearch(id));
+		return "board/updateForm";
+	}
 }

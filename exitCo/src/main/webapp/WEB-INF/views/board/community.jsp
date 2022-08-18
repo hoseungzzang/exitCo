@@ -4,7 +4,7 @@
 <%@ include file="../layout/header.jsp"%>
 <body class="d-flex flex-column min-vh-100 ">
 		<div class="container d-flex justify-content-center"  style="height:200px">
-		<div class="align-self-end"><h1>대피구역 : ${title}</h1></div>
+		<div class="align-self-end"><h1>대피구역 :${title}</h1></div>
 		</div>
 		<div class="container d-flex"  style="height:300px">
 			<table class="table table-striped align-self-center" style="margin-left: auto; margin-right: auto; text-align:center;">

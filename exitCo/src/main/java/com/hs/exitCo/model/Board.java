@@ -40,7 +40,7 @@ public class Board {
 	@Column(nullable = false, length=100)
 	private String exitName;
 	
-	@Column(nullable = false, length=100)
+	@Column(nullable = false, length=30)
 	private String title;
 	
 	@Lob//대용량데이터
