@@ -52,7 +52,7 @@
 	</c:otherwise>
 	</c:choose>
 </ul>
-			<button type="button" onclick="location.href='/board/saveForm?exitName=${title}'" class="btn bg-dark text-white align-self-center">글 쓰기</button>
+			<button type="button" onclick="location.href='/board/saveForm/${title}'" class="btn bg-dark text-white align-self-center">글 쓰기</button>
 
 
 </body>

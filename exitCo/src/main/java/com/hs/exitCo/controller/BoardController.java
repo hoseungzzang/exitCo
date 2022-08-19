@@ -24,10 +24,10 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 
-	@GetMapping("/board/saveForm")
-	public String saveForm( Board board,Model model) {
-		String exitName = board.getExitName();
-		model.addAttribute("exitName", exitName);
+	@GetMapping("/board/saveForm/{title}")
+	public String saveForm(Model model,@PathVariable String title) {
+		
+		model.addAttribute("exitName", title);
 		
 		return "board/saveForm";
 	}
