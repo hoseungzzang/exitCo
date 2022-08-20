@@ -1,0 +1,12 @@
+.saveForm > .container{
+	display:flex;
+	flex-direction: column;
+	width:1140px;
+	height:1000px;
+		 align-items: center;
+		 justify-content: center; 
+}
+.saveForm .btnSize{
+
+	width:8%;
+}

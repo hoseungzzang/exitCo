@@ -41,7 +41,6 @@ let index = {
 
 	deleteById: function() {
 		//ajax호출 시 default가 비동기 호출이다.
-
 		let id = $("#boardId").val();
 				console.log(id);
 		$.ajax({
@@ -51,7 +50,7 @@ let index = {
 
 		}).done(function(resp) {
 			alert("삭제 완료");
-			location.href = "/";
+			window.history.back();
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		});
