@@ -31,7 +31,7 @@
 * 대피소 정보 API
   * https://www.data.go.kr/data/3058512/openapi.do
 * 전국 법정동 정보 (CSV)
-  * https://www.data.go.kr/data/15063424/fileData.do
+  * https://www.data.go.kr/data/15058074/openapi.do
 
 
 ### 아쉬운점
